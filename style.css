@@ -1,8 +1,9 @@
 h1{
-	font-family: krungthep; /*gets google font for family 'krungthep'*/
+	font-family: mainfont; /*gets google font for family 'krungthep'*/
 	font-size: 30px;
 	text-align: center;
 }
+@font-face { font-family: mainfont; src: url('Krungthep.woff'); }
 tr{
 	height: 25px;
 }
