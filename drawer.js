@@ -96,17 +96,19 @@ function createHeaderRow(category) {
 }
 
 function createTableHeader(category, weight){
-  let categoryName = category.name;
+  // let categoryName = category.name;
+  let maindiv = document.createElement("div");
   let maintable = document.createElement("table");
   let tr = document.createElement("tr");
   let catNameTd = document.createElement("td");
   let catNameP = document.createElement("p");
   let weightTd = document.createElement("td");
   let weightInput = document.createElement("input");
+  let categoryScoreP = document.createElement("p");
   maintable.setAttribute("width", "100%");
   maintable.setAttribute("class", "headertable");
   catNameTd.setAttribute("style", "text-align:right;width:50%;");
-  catNameP.innerHTML = categoryName;
+  catNameP.innerHTML = category.name;
   // console.log(categoryName);
   // catNameTd.innerHTML += categoryName;
   weightTd.setAttribute("style", "text-align:left;width:50%;");
@@ -123,15 +125,24 @@ function createTableHeader(category, weight){
     getCategoryById(cid).weight = v/100;
     updateGrade();
   })
-  // weightInput.change(function(){console.log("hello");})
+  // weightInput.change(function(){console.log("hello");}
   weightTd.appendChild(weightInput);
   weightTd.innerHTML += "%";
   catNameTd.appendChild(catNameP);
+
+  categoryScoreP.setAttribute("class", "catscore");
+  categoryScoreP.setAttribute("id", "score"+category.id);
+  categoryScoreP.setAttribute("title", "Your score in this category (sum of all scores)/(sum of all Out Of). Anything above this percent in this category will make your grade go up");
+  // maintable.appendChild(categoryScoreP);
   tr.appendChild(catNameTd);
   tr.appendChild(weightTd);
   maintable.appendChild(tr);
+  maindiv.appendChild(maintable);
+  maindiv.setAttribute("class", "maindiv");
+  maindiv.appendChild(categoryScoreP);
 
-  return maintable;
+  return maindiv;
+  // return maintable;
 }
 
 function createTitleRow(){

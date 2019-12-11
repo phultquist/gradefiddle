@@ -51,10 +51,16 @@ Category.prototype.categoryMakeup = function(){
     ts += parseFloat(x.score);
     tof += parseFloat(x.outOf);
   })
+
+
   if (tof == 0 || ts == 0){
     return null;
   }
-  return this.weight * (ts/tof)
+  let makeup = this.weight * (ts/tof);
+  let scorep = $("#score"+this.id);
+  scorep.text((100*(ts/tof)).toFixed(2)+"%");
+
+  return makeup;
 }
 
 
@@ -70,8 +76,14 @@ function Assignment(tableId){
   this.category = getCategoryById(tableId);
   if (n > 1) this.name += " "+n;
   let table = $("#"+tableId);
-  this.score = 10;
-  this.outOf = 10;
+  var lastAssignment = this.category.assignments[this.category.assignments.length - 1];
+  if (lastAssignment!=null){
+    this.score = lastAssignment.score;
+    this.outOf = lastAssignment.outOf;
+  } else {
+    this.score = 10;
+    this.outOf = 10;
+  }
   this.id = ID();
   this.category.assignments.push(this);
   n++;

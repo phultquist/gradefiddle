@@ -27,7 +27,7 @@ tr:nth-child(even){
 	width: 5px;
 }
 .mock{
-	background-color: #1DB100;
+	background-color: #036468;
 }
 .header{
 	text-align: center;
@@ -36,10 +36,10 @@ tr:nth-child(even){
 	color: white;
 }
 .orange{
-	background-color: #EF9836;
+	background-color: #1BA1A5;
 }
 .green{
-	background-color: #1DB100;
+	background-color: #036468;
 	width: 10px;
 }
 #grade{
@@ -63,12 +63,12 @@ input{
 	border: none;
 	outline: none;
 	font-size: 14px;
-	color: #1DB100;
+	color: #036468;
 	width: 100%;
 	text-align: left;
 }
 #update{
-	background-color: #1DB100; /* Green */
+	background-color: #036468; /* Green */
   border: none;
   color: white;
   padding: 20px;
@@ -81,7 +81,7 @@ input{
 	outline: none;
 }
 #update:active{
-	background-color: #4CDF50; /* Green */
+	background-color: rgb(35, 115, 125); /* Green */
 }
 td:nth-child(2){
 	padding-left: 10px;
@@ -108,6 +108,10 @@ td:nth-child(2){
 	background-color: #c4eac6;
 	border-left: 5px solid #9AB79D;
 }
+.tip-blue{
+	background-color: #BBE6E7;
+	border-left: 5px solid #8DAEAF;
+}
 p{
 	font-family: arial;
 }
@@ -115,16 +119,18 @@ p{
 #title{
 	background-color: white;
 	position: fixed;
+	z-index: 1000;
 	top: 0;
 	right: 0;
 	width: 100%;
 	height: 80px;
 	box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
 }
 body{
 	margin-top: 90px;
 }
-.headertable td, .headertable td p{
+.headertable td, .headertable td p, .catscore{
 	font-family: arial-black;
 	color: white;
 }
@@ -148,7 +154,7 @@ textarea {
   font-family: "Helvetica","Arial",sans-serif;
   margin: 0;
   padding: 4px 0;
-  width: 100%;
+  width: 96%;
   background: 0 0;
   text-align: left;
   color: inherit;
@@ -178,4 +184,15 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.catscore{
+	position:absolute;
+	top:0;
+	right:0;
+	margin-right: 10px;
+}
+
+.maindiv{
+	position: relative;
 }

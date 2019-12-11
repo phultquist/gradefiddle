@@ -1,28 +1,5 @@
-//updates all fields on input
-
-// function updateCategoryTotals() {
-// 	var assignments,
-// 			totalOutOf,
-// 			totalScore;
-// 	for (category of categories) {
-// 		totalOutOf = 0;
-// 		totalScore = 0;
-// 		assignments = category.assignments;
-// 		for (assignment of assignments) {
-// 			totalOutOf += assignment.outOf;
-// 			totalScore += assignment.score;
-// 		}
-// 		console.log('start category: '+category.name);
-// 		console.log('totalOutOf: '+totalOutOf);
-// 		console.log('totalScore: '+totalScore);
-// 		console.log('end category');
-// 		category.totalOutOf = totalOutOf;
-// 		category.totalScore = totalScore;
-// 	}
-// }
-
 function askForCategoryInfo(n){ //n is the number of categories that info is requested for
-	$('#modal').css("display", "block");
+	$('#modal').css("display", "block"); //function not in use yet :(
 	let categorytable = document.createElement("table");
 	let row = document.createElement("tr");
 	let nameTd = document.createElement("td");
@@ -40,7 +17,7 @@ function askForCategoryInfo(n){ //n is the number of categories that info is req
 
 	categorytable.appendChild(row);
 
-	
+
 }
 
 function createCategory() {
