@@ -4,10 +4,25 @@ var entry = $("#entry");
 // $("#update").click(read());
 
 function read(){
-	var linestext = entry.val().split("\n");
+	let rawtext = entry.val();
+	var linestext = rawtext.split("\n");
+
+	if (rawtext.startsWith("Welcome, ")){
+		let temparr = rawtext.split("Assignments");
+		let temparr2 = temparr[1].split("Grades last updated on");
+		rawtext = temparr2[0];
+		linestext = rawtext.split("\n");
+
+		//some formatting that deals with extra lines
+		linestext.shift();
+		linestext.shift();
+		linestext.pop();
+	}
+
 	var lines = [];
 	var cats = [];
 	var ids = [];
+
 	if (linestext[0].startsWith("Due Date")){
 		linestext.shift();
 	}
