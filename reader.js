@@ -35,7 +35,7 @@ function read(){
 	for (ass of lines){
 		var cid;
 		if (cats.indexOf(ass.category)==-1){
-			var newc = new Category(ass.category, 0.2)
+			var newc = new Category(ass.category, 0.2);
 			// console.log(newc);
 			cats.push(ass.category);
 			categories.push(newc);
@@ -43,6 +43,12 @@ function read(){
 			ids.push(newc.id);
 		}
 	}
+
+	var per = 1/categories.length;
+	for (tempcat of categories){
+		tempcat.weight = Math.floor(per*100)/100;
+	}
+
 	drawTables();
 
 	for (ass of lines){

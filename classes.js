@@ -38,6 +38,12 @@
 // }
 
 function Category(name, weight){
+
+  // constructor(){
+  //   //this is what i should have
+  //   //categories.push(this);
+  // }
+
   this.weight = weight;
   this.name = name;
   this.id = 'c'+ID();

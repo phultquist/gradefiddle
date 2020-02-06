@@ -20,7 +20,7 @@ const numcols = 6;
 let categories = [];
 let assignments = []
 let b = document.getElementById('t');
-
+console.log("https://www.google.com/search?q=front+end+vs+back+end+meme&source=lnms&tbm=isch&sa=X&ved=2ahUKEwijztbP-8LmAhVCBs0KHTiJBsQQ_AUoAXoECAwQAw&biw=1440&bih=821#imgrc=RmAc_nZvbzpCyM:");
 function drawTables(){
   for (l in categories){
     let table = createTable(categories[l]);
@@ -33,14 +33,14 @@ function drawTables(){
 
 drawTables();
 
-$("#entry").click(function(){
+/*$("#entry").click(function(){
   var val = $("#entry").val();
   if (val.startsWith("Type")){
 
   } else {
     // $("#entry").val('');
   }
-})
+})*/
 
 function createTable(category) {
   /*
