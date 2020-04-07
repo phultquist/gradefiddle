@@ -45,8 +45,11 @@ function showFinalGrade(g) {
 	} else {
 		formatted = (g*100).toFixed(3).toString()+'%';
 	}
-	let field = document.getElementById('grade');
-	field.innerHTML = formatted;
+	// let field = document.getElementById('grade');
+	let field = $("#grade");
+	field.text(formatted)
+	$("#gradediv").toggle("highlight")
+	// field.innerHTML = formatted;
 }
 
 function updateGrade() {

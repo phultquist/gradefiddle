@@ -282,4 +282,4 @@ function undrawTables(){
   div.appendChild(createNewCategoryButton());
 }
 
-b.appendChild(createNewCategoryButton())
+b.appendChild(createNewCategoryButton());
