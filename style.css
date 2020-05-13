@@ -168,9 +168,6 @@ textarea:focus {
 textarea:hover{
 	border: 1px solid black;
 }
-.outer{
-
-}
 .inh{
 	color: inherit;
 	border-bottom: 1px solid white;

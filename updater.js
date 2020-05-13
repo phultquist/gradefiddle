@@ -39,6 +39,7 @@ function createCategory() {
 }
 
 function showFinalGrade(g) {
+	console.log("showFinalGrade called");
 	let formatted;
 	if (g===undefined || g==null){
 		formatted = "";
@@ -47,8 +48,9 @@ function showFinalGrade(g) {
 	}
 	// let field = document.getElementById('grade');
 	let field = $("#grade");
-	field.text(formatted)
-	$("#gradediv").toggle("highlight")
+	field.text(formatted);
+	$("#gradediv").fadeOut(50).fadeIn(100);
+	$("#gradediv").show();
 	// field.innerHTML = formatted;
 }
 
